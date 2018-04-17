@@ -25,7 +25,7 @@ SECRET_KEY = 'op=bnx%5wpa!hknu=wq0b#hrpy*z)8y$^-g2qq96+vd(_12+6u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ "anastasiadankiv.pythonanywhere.com" ]
 
 
 # Application definition
@@ -119,3 +119,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join (BASE_DIR , 'static')
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
